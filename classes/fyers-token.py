@@ -1,0 +1,16 @@
+from fyers_api import fyersModel
+from fyers_api import accessToken
+
+session=accessToken.SessionModel(client_id="VZ77UMQM2N-100",
+secret_key="PCY8JXB1P7",redirect_uri="https://yogeshdewangan.com/123",
+response_type="code", grant_type="authorization_code")
+
+response = session.generate_authcode()
+print(response)
+
+auth_code = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJhcGkubG9naW4uZnllcnMuaW4iLCJpYXQiOjE2NDY2NDA4NTIsImV4cCI6MTY0NjY3MDg1MiwibmJmIjoxNjQ2NjQwMjUyLCJhdWQiOiJbXCJ4OjBcIiwgXCJ4OjFcIiwgXCJ4OjJcIiwgXCJkOjFcIiwgXCJkOjJcIiwgXCJ4OjFcIiwgXCJ4OjBcIl0iLCJzdWIiOiJhdXRoX2NvZGUiLCJkaXNwbGF5X25hbWUiOiJYWTAwMDg3Iiwibm9uY2UiOiIiLCJhcHBfaWQiOiJWWjc3VU1RTTJOIiwidXVpZCI6IjJhMTdjODE3NjMyNzQ2N2ZiYjViOWI5MmY1ZmU4ZjY2IiwiaXBBZGRyIjoiMC4wLjAuMCIsInNjb3BlIjoiIn0.ZXQijTjEca9CBCO9ZW_IIpeeYgVoMQ6J9eiK220pLts"
+
+session.set_token(auth_code)
+response = session.generate_token()
+
+print(response)
