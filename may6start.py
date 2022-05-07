@@ -1,6 +1,5 @@
-import conf_reader
 import traceback
-import time, random, logging
+import time, logging
 from datetime import datetime
 import symbol_price
 

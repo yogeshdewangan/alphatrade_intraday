@@ -26,9 +26,6 @@ with open('data1.csv') as csv_file:
             if row[4].capitalize() == "yes".capitalize():
                 MYDEF.append(stock)
                 line_count += 1
-                # print_str = "Stock: {} | Buy/Sell: {} | Quantity: {} ".format(stock.symbol, stock.buy_or_sell,
-                #                                                               stock.quantity)
-                # print(print_str)
-                # log.info(print_str)
+
     print(f'Total  {line_count - 1} stocks found in data.csv.')
     log.info("Total {} stocks found in data.csv".format(line_count - 1))

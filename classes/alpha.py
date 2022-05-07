@@ -36,6 +36,7 @@ def get_balance():
         balance = sas.get_balance()
         print("Unrealized M2M: "+ str(balance["data"]["cash_positions"][0]["utilized"]["unrealised_m2m"]))
         print("Realized M2M: " + str(balance["data"]["cash_positions"][0]["utilized"]["realised_m2m"]))
+        print("Net: " + str(balance["data"]["cash_positions"][0]["net"]))
         print("M2M: "+ str(sas.get_total_m2m()))
     except:
         pass
